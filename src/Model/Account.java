@@ -3,17 +3,14 @@ package Model;
 public class Account {
     private String accountId;
     private String accountPw;
-    private String salt;
-    private int role;
-    private int sta; // trạng thái tài khoản
-
+    private String role;
+    private boolean sta;
     public Account() {
     }
 
-    public Account(String accountId, String accountPw, String salt, int role, int sta) {
+    public Account(String accountId, String accountPw, String role, boolean sta) {
         this.accountId = accountId;
         this.accountPw = accountPw;
-        this.salt = salt;
         this.role = role;
         this.sta = sta;
     }
@@ -22,39 +19,34 @@ public class Account {
         return accountId;
     }
 
-    public void setAccountId(String accountId) {
-        this.accountId = accountId;
-    }
-
     public String getAccountPw() {
         return accountPw;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public boolean isSta() {
+        return sta;
+    }
+
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
 
     public void setAccountPw(String accountPw) {
         this.accountPw = accountPw;
     }
 
-    public String getSalt() {
-        return salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
-    }
-
-    public int getRole() {
-        return role;
-    }
-
-    public void setRole(int role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
-    public int getSta() {
-        return sta;
-    }
-
-    public void setSta(int sta) {
+    public void setSta(boolean sta) {
         this.sta = sta;
     }
+
+    
+
 }
